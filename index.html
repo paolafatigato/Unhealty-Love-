@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Relationships 💜</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>💜 Healthy Relationships: Learn to Recognize and Respect</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <div class="emergency-exit">
+                <button onclick="emergencyExit()" class="exit-btn">⚠️ Quick Exit</button>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav id="mainNav">
+            <button class="nav-btn" onclick="showSection('intro')">Introduction</button>
+            <button class="nav-btn" onclick="showSection('vocabulary')">Vocabulary</button>
+            <button class="nav-btn" onclick="showSection('quiz')">Myths vs Facts Quiz</button>
+            <button class="nav-btn" onclick="showSection('semaforo')">Traffic Light Game</button>
+            <button class="nav-btn" onclick="showSection('decoder')">Excuse Decoder</button>
+            <button class="nav-btn" onclick="showSection('matching')">Types of Manipulators</button>
+            <button class="nav-btn" onclick="showSection('cases')">Case Studies</button>
+            <button class="nav-btn" onclick="showSection('warning-signs')">Warning Signs</button>
+            <button class="nav-btn" onclick="showSection('resources')">Resources</button>
+        </nav>
+
+        <!-- Introduction Section -->
+        <section id="intro" class="content-section active">
+            <h2>Welcome! 🌟</h2>
+            <div class="intro-content">
+                <p>This activity will help you understand healthy and respectful relationships.</p>
+                <p>You will learn to recognize:</p>
+                <ul>
+                    <li>✅ Respectful behaviors</li>
+                    <li>⚠️ Signs of control and manipulation</li>
+                    <li>🚫 Potentially dangerous situations</li>
+                    <li>💪 How to ask for help</li>
+                </ul>
+                <div class="important-note">
+                    <strong>Important:</strong> This website is educational. If you are living a difficult situation, talk to a trusted adult or call 1522 (Anti-Violence Number) or 112 (Emergency).
+                </div>
+                <button class="btn-primary" onclick="showSection('vocabulary')">Start the Journey →</button>
+            </div>
+        </section>
+
+        <!-- Vocabulary Section -->
+        <section id="vocabulary" class="content-section">
+            <h2>📚 Essential Vocabulary</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <h3>Respect</h3>
+                    <p><strong>Definition:</strong> Treating others with consideration, listening to their "no", valuing their opinions.</p>
+                    <div class="example">Example: "It's okay if you don't want to go out tonight!"</div>
+                </div>
+                <div class="vocab-card">
+                    <h3>Boundaries</h3>
+                    <p><strong>Definition:</strong> Your personal limits - what makes you feel good and what doesn't. You have the right to have them!</p>
+                    <div class="example">Example: "I don't like it when you look at my phone."</div>
+                </div>
+                <div class="vocab-card">
+                    <h3>Manipulation</h3>
+                    <p><strong>Definition:</strong> When someone makes you feel guilty or wrong to get what they want.</p>
+                    <div class="example">Example: "If you really loved me, you would..."</div>
+                </div>
+                <div class="vocab-card">
+                    <h3>Control</h3>
+                    <p><strong>Definition:</strong> When someone decides for you, isolates you, or controls what you do and who you see.</p>
+                    <div class="example">Example: "You can't go out with your friends."</div>
+                </div>
+                <div class="vocab-card">
+                    <h3>Gaslighting</h3>
+                    <p><strong>Definition:</strong> Making someone doubt their own perception of reality.</p>
+                    <div class="example">Example: "That never happened, you're making it up!"</div>
+                </div>
+                <div class="vocab-card">
+                    <h3>Healthy Relationship</h3>
+                    <p><strong>Definition:</strong> Based on mutual respect, trust, honest communication and freedom.</p>
+                    <div class="example">Example: Both people support each other and grow together.</div>
+                </div>
+            </div>
+            <button class="btn-primary" onclick="showSection('quiz')">Continue to Quiz →</button>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="content-section">
+            <h2>🎯 Quiz: Myths vs Facts</h2>
+            <p class="instruction">Read each statement carefully. Decide if it's TRUE or FALSE.</p>
+            <div id="quizContainer"></div>
+            <div id="quizResult" class="result-box"></div>
+        </section>
+
+        <!-- Semaforo Section -->
+        <section id="semaforo" class="content-section">
+            <h2>🚦 Traffic Light of Relationships</h2>
+            <p class="instruction">Read each scenario. Decide if it's GREEN (healthy), YELLOW (be careful), or RED (dangerous).</p>
+            <div class="vocab-reminder">
+                <strong>Remember:</strong><br>
+                🟢 GREEN = Healthy behavior<br>
+                🟡 YELLOW = Warning, be careful<br>
+                🔴 RED = Dangerous, ask for help
+            </div>
+            <div id="semaforoContainer"></div>
+            <div id="semaforoResult" class="result-box"></div>
+        </section>
+
+        <!-- Decoder Section -->
+        <section id="decoder" class="content-section">
+            <h2>🔍 Excuse Decoder</h2>
+            <p class="instruction">Manipulative people use excuses to justify bad behavior. Learn to recognize them!</p>
+            <div class="vocab-reminder">
+                <strong>Remember:</strong> An excuse is a reason someone gives to explain why they did something wrong. But excuses don't make bad actions okay!
+            </div>
+            <div id="decoderContainer"></div>
+            <div id="decoderResult" class="result-box"></div>
+        </section>
+
+        <!-- Matching Game Section -->
+        <section id="matching" class="content-section">
+            <h2>🎭 Types of Manipulators</h2>
+            <p class="instruction">According to Lundy Bancroft, there are different "types" of manipulators. Match the description to the type!</p>
+            <div class="matching-info">
+                <p><strong>Remember:</strong> Nobody "is made this way". These are behaviors people <strong>choose</strong>, not personalities they can't change!</p>
+            </div>
+            <div id="matchingContainer"></div>
+            <div id="matchingResult" class="result-box"></div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="cases" class="content-section">
+            <h2>📖 Interactive Case Studies</h2>
+            <p class="instruction">Read each story. Think about the situation. Choose the best answer.</p>
+            <div id="casesContainer"></div>
+            <div id="caseResult" class="result-box"></div>
+        </section>
+
+        <!-- Warning Signs Section -->
+        <section id="warning-signs" class="content-section">
+            <h2>🚨 Warning Signs</h2>
+            <div class="warning-intro">
+                <p>Recognizing early signs can help you protect yourself or others. Here's what to look for:</p>
+                <p><strong>Warning sign =</strong> a signal that something might be dangerous or wrong</p>
+            </div>
+            <div class="warning-categories">
+                <div class="warning-category">
+                    <h3>🔴 Control</h3>
+                    <ul>
+                        <li>Wants to know where you are and who you're with all the time</li>
+                        <li>Checks your phone or social media</li>
+                        <li>Gets angry if you don't answer messages immediately</li>
+                        <li>Decides what you wear or how you behave</li>
+                    </ul>
+                </div>
+                <div class="warning-category">
+                    <h3>🔴 Isolation</h3>
+                    <ul>
+                        <li>Criticizes your friends or family</li>
+                        <li>Gets upset when you spend time with others</li>
+                        <li>Says nobody understands you like he/she does</li>
+                        <li>Makes you feel guilty for having your own life</li>
+                    </ul>
+                </div>
+                <div class="warning-category">
+                    <h3>🔴 Excessive Jealousy</h3>
+                    <ul>
+                        <li>Is jealous of everyone, even friends or relatives</li>
+                        <li>Accuses you of cheating without reason</li>
+                        <li>Says jealousy is "proof of love"</li>
+                        <li>Makes scenes because you give attention to others</li>
+                    </ul>
+                </div>
+                <div class="warning-category">
+                    <h3>🔴 Emotional Manipulation</h3>
+                    <ul>
+                        <li>Makes you feel guilty all the time</li>
+                        <li>Minimizes your feelings ("You're exaggerating!")</li>
+                        <li>Alternates between being sweet and cruel</li>
+                        <li>Makes you feel "crazy" for doubting</li>
+                    </ul>
+                </div>
+                <div class="warning-category">
+                    <h3>🔴 No Responsibility</h3>
+                    <ul>
+                        <li>Never apologizes sincerely</li>
+                        <li>Always blames others</li>
+                        <li>Has many excuses for bad behavior</li>
+                        <li>Promises to change but never does</li>
+                    </ul>
+                </div>
+                <div class="warning-category">
+                    <h3>🔴 No Respect</h3>
+                    <ul>
+                        <li>Insults or humiliates you (even "as a joke")</li>
+                        <li>Ignores your "no" and your boundaries</li>
+                        <li>Criticizes you constantly</li>
+                        <li>Makes you feel inferior</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="warning-action">
+                <h3>💪 What to Do?</h3>
+                <ul>
+                    <li><strong>Trust your instinct:</strong> If something makes you feel uncomfortable, it's important</li>
+                    <li><strong>Talk to someone:</strong> A trusted adult, teacher, parent</li>
+                    <li><strong>Remember:</strong> It's not your fault and you deserve respect</li>
+                    <li><strong>Ask for help:</strong> 1522 (free 24/7), 114 (Child Emergency), 112</li>
+                </ul>
+            </div>
+            <button class="btn-primary" onclick="showSection('resources')">Go to Resources →</button>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="content-section">
+            <h2>📞 Resources and Help</h2>
+            <div class="resources-grid">
+                <div class="resource-card emergency">
+                    <h3>🚨 Emergency</h3>
+                    <p class="phone-number">112</p>
+                    <p>Emergency number</p>
+                </div>
+                <div class="resource-card">
+                    <h3>💜 1522</h3>
+                    <p class="phone-number">1522</p>
+                    <p>Anti-Violence and Stalking Number<br>Free 24/7</p>
+                </div>
+                <div class="resource-card">
+                    <h3>👶 Telefono Azzurro</h3>
+                    <p class="phone-number">19696</p>
+                    <p>Help for children and teens<br>Every day 24/7</p>
+                </div>
+                <div class="resource-card">
+                    <h3>🆘 114</h3>
+                    <p class="phone-number">114</p>
+                    <p>Child Emergency<br>SMS/WhatsApp available</p>
+                </div>
+            </div>
+            <div class="final-message">
+                <h3>Always Remember:</h3>
+                <ul>
+                    <li>✨ You deserve respect and kindness</li>
+                    <li>💪 Your feelings are valid</li>
+                    <li>🗣️ You have the right to say "no"</li>
+                    <li>🤝 Asking for help is a sign of strength</li>
+                    <li>💜 You are never alone</li>
+                </ul>
+            </div>
+            <div class="completion-badge">
+                <h2>🎓 You completed the journey!</h2>
+                <p>Continue to protect yourself and others with what you learned.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        Ms Fatigato
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
