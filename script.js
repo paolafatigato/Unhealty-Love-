@@ -5,44 +5,44 @@ let completedSections = new Set();
 // Quiz Data - Simple English with scaffolding
 const quizData = [
     {
-        question: "Jealousy is a sign of love.",
+        question: "Myth: He is violent to his girlfriend because he was abused as a child.",
         correct: false,
-        explanation: "MYTH! Excessive jealousy is a sign of control, not love. Healthy love is based on trust."
+        explanation: "MYTH! While childhood abuse may correlate with some behaviors, most people who were abused do NOT become abusers. It's a choice, not a destiny."
     },
     {
-        question: "If someone really loves you, they should respect your 'no'.",
+        question: "Fact: He can be an abuser, even if he is a college graduate.",
         correct: true,
-        explanation: "FACT! Respecting boundaries is essential in every healthy relationship. People who love you respect your decisions."
+        explanation: "FACT! Abuse happens in all social classes, education levels, and religions. Success or status doesn't prevent abusive behavior."
     },
     {
-        question: "Violent people cannot change.",
+        question: "Myth: Alcohol or drugs make him abusive.",
         correct: false,
-        explanation: "MYTH! They CAN change, BUT only if they recognize the problem, take responsibility, and get professional help. Most choose not to."
+        explanation: "MYTH! Substances don't create abuse - they're often used as an excuse. Many abusers are violent when sober, and many substance users are not violent."
     },
     {
-        question: "It's normal for your partner to check your phone 'for safety'.",
+        question: "Myth: He loses control when he's angry.",
         correct: false,
-        explanation: "MYTH! Checking your partner's phone is a violation of privacy and a sign of control. Healthy relationships are based on trust."
+        explanation: "MYTH! If he really 'lost control', he'd be violent to everyone. Instead, he chooses who to abuse and when. He's actually very much IN control."
     },
     {
-        question: "Boys and men can also be victims of violence.",
+        question: "Fact: Abusers often believe they have special rights in relationships.",
         correct: true,
-        explanation: "FACT! Violence can affect anyone, regardless of gender. Everyone deserves respect and safety."
+        explanation: "FACT! Bancroft found that abusers typically believe they're entitled to special treatment and that their needs should come first."
     },
     {
-        question: "If you stay in a toxic relationship, it's your fault.",
+        question: "Myth: If she just stopped wearing mini skirts, he wouldn't be abusive.",
         correct: false,
-        explanation: "MYTH! Nobody deserves abuse. Leaving a toxic relationship is very difficult for many reasons (fear, manipulation, economic dependence). The fault is always with the person who does harm."
+        explanation: "MYTH! The victim's behavior doesn't cause abuse. Abusers find excuses no matter what their partner does. It's about control, not reaction."
     },
     {
-        question: "A healthy relationship includes individual space and time with friends/family.",
+        question: "Fact: Abusive behavior is learned, not genetic.",
         correct: true,
-        explanation: "FACT! Healthy relationships respect individuality. It's not healthy to want to be together 24/7 or isolate your partner."
+        explanation: "FACT! Abuse is a learned pattern of behavior and attitudes, which means it CAN be unlearned - if the person takes responsibility."
     },
     {
-        question: "If someone apologizes after hurting you, everything is okay.",
+        question: "Myth: Couples counseling can fix an abusive relationship.",
         correct: false,
-        explanation: "MYTH! Apologies only matter if followed by real changes. The cycle 'violence-apology-honeymoon-violence' is typical of abusive relationships."
+        explanation: "MYTH! Couples therapy can be dangerous in abusive relationships. The abuser needs individual therapy focused on taking responsibility, not 'relationship problems'."
     }
 ];
 
@@ -54,11 +54,23 @@ const semaforoScenarios = [
         explanation: "GREEN ✅ Marco respects Giulia's answer without pressure or complaints. This is respect!",
         vocabulary: "respect = treating someone well, listening to their decisions"
     },
+        {
+        scenario: "Tom says: 'You look better without makeup.'",
+        correct: "yellow",
+        explanation: "YELLOW ⚠️ Could be a compliment OR the start of controlling how you look. Pay attention if it becomes a rule.",
+        vocabulary: "compliment = saying something nice about someone"
+    },
     {
         scenario: "Luca gets angry every time Sara goes out with her friends. He sends her many messages asking where she is.",
         correct: "red",
         explanation: "RED 🚫 This is control disguised as worry. Sara has the right to her social life without constant explanations.",
         vocabulary: "control = when someone wants to decide everything for you"
+    },
+        {
+        scenario: "After saying something mean, Jake buys flowers and says 'I'll never do it again.'",
+        correct: "yellow",
+        explanation: "YELLOW ⚠️ Actions matter more than gifts. If it happens again, the promise was empty.",
+        vocabulary: "promise = saying you will do something"
     },
     {
         scenario: "Elena tells Tom 'I'm sorry, but today I prefer to be alone' and he responds 'I understand, call me if you need anything'.",
@@ -66,17 +78,29 @@ const semaforoScenarios = [
         explanation: "GREEN ✅ Tom respects Elena's boundaries and shows he's available without being invasive.",
         vocabulary: "boundaries = your personal limits, what's okay and not okay for you"
     },
+        {
+        scenario: "During a fight, Alex punches the wall.",
+        correct: "red",
+        explanation: "RED 🚫 This is intimidation. Violence near you is a threat, even if not directed at you.",
+        vocabulary: "intimidation = scaring someone to control them"
+    },
     {
-        scenario: "Alex tells Chris 'If you really care about me, you'll cancel your plans and come with me'.",
+        scenario: "Leila is sad today, she tells Chris 'If you really care about me, you'll cancel your plans and stay with me'.",
         correct: "red",
         explanation: "RED 🚫 This is emotional manipulation. Using love as blackmail to control someone's decisions is abusive.",
         vocabulary: "manipulation = making someone feel bad to get what you want"
     },
-    {
-        scenario: "Marta notices that her boyfriend has started to criticize how she dresses and suggests what she should wear.",
+        {
+        scenario: "Mike jokes about Emma in front of friends. She feels embarrassed but he says 'It's just a joke!'",
         correct: "yellow",
-        explanation: "YELLOW ⚠️ It depends on the context and frequency. If it's occasional and respectful, it might be okay. If it's constant and controlling, it's a warning sign.",
-        vocabulary: "criticize = to say negative things about someone"
+        explanation: "YELLOW ⚠️ If she's hurt, it's not funny. Good partners care about your feelings, not just their intentions.",
+        vocabulary: "embarrassed = feeling ashamed or uncomfortable"
+    },
+    {
+        scenario: "Tom says: 'You look better without makeup.'",
+        correct: "yellow",
+        explanation: "YELLOW ⚠️ Could be a compliment OR the start of controlling how you look. Pay attention if it becomes a rule.",
+        vocabulary: "compliment = saying something nice about someone"
     },
     {
         scenario: "During an argument, Paolo tells Anna 'You're right, I didn't think about that. Sorry'.",
@@ -95,6 +119,18 @@ const semaforoScenarios = [
         correct: "red",
         explanation: "RED 🚫 Privacy doesn't mean hiding something. Everyone has the right to private spaces. This is manipulation.",
         vocabulary: "privacy = your right to keep some things private"
+    },
+        {
+        scenario: "Anna says 'I need time to think' and Luca waits without calling her.",
+        correct: "green",
+        explanation: "GREEN ✅ Giving space when asked shows respect and emotional maturity.",
+        vocabulary: "space = time alone to think or relax"
+    },
+        {
+        scenario: "Paul says 'Nobody else would love you like I do.'",
+        correct: "red",
+        explanation: "RED 🚫 This isolates you and lowers your self-worth. Love doesn't make you feel trapped.",
+        vocabulary: "self-worth = how much you value yourself"
     }
 ];
 
